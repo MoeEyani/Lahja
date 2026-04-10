@@ -766,6 +766,8 @@ function showSplash(cc) {
 
 window.confirmSplash = function() {
   clearTimeout(_splashTimer);
+  // Apply the country theme that was shown in the splash
+  applyTheme(_splashCountry);
   var splash = document.getElementById('splash');
   if (splash) {
     splash.classList.add('out');
